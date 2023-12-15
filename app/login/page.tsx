@@ -1,15 +1,16 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
+import axiosInstance from '../interceptors';
 
-interface User {
-  username: string;
-  password: string;
-}
+const LoginPage = () => {
+  useEffect(() => {
+    handleLogin();
+  }, []);
 
-interface LoginResponse {
-  token: string;
-}
+  const handleLogin = () => {
+    axiosInstance.get('users');
+  };
 
-const Login = () => {
   return (
     <>
       <div className='form p-3 space-y-3'>
@@ -27,4 +28,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

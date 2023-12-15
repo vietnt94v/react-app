@@ -1,3 +1,3 @@
 export const Constants = {
-  api: 1
+  api: process.env.NEXT_PUBLIC_API_URL
 }
