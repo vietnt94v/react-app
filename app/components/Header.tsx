@@ -6,7 +6,6 @@ const Header = () => {
     <>
       <div className='flex items-center bg-violet-400 h-14'>
         <div className='container'>
-          <Image src='../../next.svg' alt='Logo' width={100} height={24} />
         </div>
       </div>
     </>

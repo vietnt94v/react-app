@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Constants } from './constants';
 
 const axiosInstance = axios.create({
-  baseURL: Constants.api,
+  baseURL: Constants.api_auth,
 });
 
 axios.interceptors.request.use(function (config) {
