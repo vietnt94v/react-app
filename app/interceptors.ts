@@ -1,20 +1,21 @@
+'use client';
 import axios from 'axios';
 import { Constants } from './constants';
 
-const axiosInstance = axios.create({
+const axiosInterceptor = axios.create({
   baseURL: Constants.api_auth,
 });
 
-axios.interceptors.request.use(function (config) {
+axiosInterceptor.interceptors.request.use(function (config) {
   return config;
 }, function (error) {
   return Promise.reject(error);
 });
 
-axios.interceptors.response.use(function (response) {
-  return response;
+axiosInterceptor.interceptors.response.use(function (response) {
+  return response.data;
 }, function (error) {
   return Promise.reject(error);
 });
 
-export default axiosInstance;
+export default axiosInterceptor;

@@ -1,4 +1,11 @@
 interface User {
-  username: string,
-  password: string
+  id?: string,
+  email: string,
+  firstName?: string,
+  gender?: string,
+  image?: string,
+  http?: string,
+  lastName?: string,
+  token?: string,
+  username?: string,
 }
